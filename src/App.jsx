@@ -1001,9 +1001,9 @@ export default function App() {
               <button onClick={() => scrollToSection('sobre')} className={`font-medium transition-colors hover:text-accent ${isScrolled ? 'text-slate-600' : 'text-white/90'}`}>AJA</button>
               <button onClick={() => scrollToSection('servicos')} className={`font-medium transition-colors hover:text-accent ${isScrolled ? 'text-slate-600' : 'text-white/90'}`}>Soluções</button>
               <button onClick={() => scrollToSection('clientes')} className={`font-medium transition-colors hover:text-accent ${isScrolled ? 'text-slate-600' : 'text-white/90'}`}>Clientes</button>
-              <button onClick={() => scrollToSection('contato')} className="bg-accent text-primary px-6 py-2.5 rounded-full font-bold hover:opacity-90 transition-all shadow-lg hover:-translate-y-1">
+              <a href={`https://wa.me/55${siteData.contatos?.telefone?.replace(/\D/g,'')}?text=Olá, estava no site da AJA e gostaria de conversar.`} target="_blank" rel="noreferrer" className="bg-accent text-primary px-6 py-2.5 rounded-full font-bold hover:opacity-90 transition-all shadow-lg hover:-translate-y-1 inline-block">
                 Fale Comigo
-              </button>
+              </a>
             </div>
 
             <div className="md:hidden flex items-center">
@@ -1020,7 +1020,7 @@ export default function App() {
               <button onClick={() => scrollToSection('premissa')} className="block w-full text-left p-3 text-slate-600 font-bold bg-slate-50 rounded-xl">A Premissa</button>
               <button onClick={() => scrollToSection('sobre')} className="block w-full text-left p-3 text-slate-600 font-bold bg-slate-50 rounded-xl">AJA</button>
               <button onClick={() => scrollToSection('servicos')} className="block w-full text-left p-3 text-slate-600 font-bold bg-slate-50 rounded-xl">Soluções</button>
-              <button onClick={() => scrollToSection('contato')} className="block w-full text-center p-3 text-white font-bold bg-accent rounded-xl mt-4">Fale Comigo</button>
+              <a href={`https://wa.me/55${siteData.contatos?.telefone?.replace(/\D/g,'')}?text=Olá, estava no site da AJA e gostaria de conversar.`} target="_blank" rel="noreferrer" className="block w-full text-center p-3 text-primary font-bold bg-accent rounded-xl mt-4">Fale Comigo</a>
             </div>
           </div>
         )}
@@ -1294,8 +1294,8 @@ export default function App() {
           </div>
         </section>
       ))}
-
-      <section className="bg-primary text-white pt-24 pb-12 relative overflow-hidden border-t border-black/20">
+      {/* FOOTER / CONTATO */}
+      <section id="contato" className="bg-primary text-white pt-24 pb-12 relative overflow-hidden border-t border-black/20">
         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
